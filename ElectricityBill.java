@@ -40,3 +40,19 @@ class TariffCalculator {
         return billAmount;
     }
 }
+
+public class ElectricityBill {
+    public static void main(String[] args) {
+        
+        Consumer consumer1 = new Consumer(101, "Ananya Gupta", 250);
+
+        TariffCalculator calculator = new TariffCalculator();
+
+        double totalBill = calculator.generateBill(consumer1);
+
+        System.out.println("Consumer ID: " + consumer1.getId());
+        System.out.println("Name: " + consumer1.getName());
+        System.out.println("Units Consumed: " + consumer1.getUnitsConsumed());
+        System.out.println("Total Electricity Bill: Rs." + totalBill);
+    }
+}
